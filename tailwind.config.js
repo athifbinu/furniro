@@ -21,6 +21,7 @@ export const theme = {
       primary: "#101828",
       secondary: "#7F56D9",
       homebg: "#FFF3E3",
+      roomsbg: "#FCF8F3",
     },
     boxShadow: {
       1: "0px 4px 30px rgba(0, 0, 0, 0.08)",
