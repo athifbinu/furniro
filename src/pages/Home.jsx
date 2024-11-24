@@ -1,14 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import homebg from "../assets/Images/homebg.jpeg"; // Ensure the correct path to your image
 import bn1 from "../assets/Images/bn3.png";
 import bn2 from "../assets/Images/bn2.png";
 import bn3 from "../assets/Images/bn3.png";
 
-import pr1 from "../assets/Images/product1.png";
-import pr2 from "../assets/Images/product2.png";
-import pr3 from "../assets/Images/product3.jpeg";
-import pr4 from "../assets/Images/product3.png";
-import pr5 from "../assets/Images/product4.png";
 import centerimg from "../assets/Images/centerbn.png";
 import galery1 from "../assets/Images/gl1.png";
 import galery2 from "../assets/Images/gl2.png";
@@ -18,19 +13,22 @@ import galery5 from "../assets/Images/gl5.png";
 import galery6 from "../assets/Images/gl6.png";
 import galery7 from "../assets/Images/gl7.png";
 import galery8 from "../assets/Images/gl8.png";
+
+import pr1 from "../assets/Images/product1.png";
+import pr2 from "../assets/Images/product2.png";
+import pr3 from "../assets/Images/product3.jpeg";
+import pr4 from "../assets/Images/product3.png";
+import pr5 from "../assets/Images/product4.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ProductCard from "../Components/ui/ProductCard";
 
-const images = [
-  { src: "https://via.placeholder.com/300", alt: "Item 1" },
-  { src: "https://via.placeholder.com/300", alt: "Item 2" },
-  { src: "https://via.placeholder.com/300", alt: "Item 3" },
-  { src: "https://via.placeholder.com/300", alt: "Item 4" },
-  { src: "https://via.placeholder.com/300", alt: "Item 5" },
-];
+import products from "../assets/datas/data";
 
 const HomePage = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -95,152 +93,17 @@ const HomePage = () => {
       <section className="py-16 mb-10">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Products</h2>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr1}
-                alt="Syltherine"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
+            {products.map((product, index) => (
+              <ProductCard
+                key={index}
+                product={product}
+                index={index}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
               />
-              <div className="p-4 bg-blue-50">
-                <h3 className="text-lg font-semibold">Syltherine</h3>
-                <p className="text-sm text-gray-500">Stylish cafe chair</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 2.500.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 3.500.000
-                </p>
-              </div>
-            </div>
-
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr2}
-                alt="Syltherine"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
-              />
-              <div className="p-4 bg-blue-50">
-                <h3 className="text-lg font-semibold">Syltherine</h3>
-                <p className="text-sm text-gray-500">Stylish cafe chair</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 2.500.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 3.500.000
-                </p>
-              </div>
-            </div>
-
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr3}
-                alt="Lolito"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
-              />
-              <div className="p-4  bg-blue-50">
-                <h3 className="text-lg font-semibold">Lolito</h3>
-                <p className="text-sm text-gray-500">Luxury big sofa</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 7.000.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 14.000.000
-                </p>
-              </div>
-            </div>
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr4}
-                alt="Syltherine"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
-              />
-              <div className="p-4 bg-blue-50">
-                <h3 className="text-lg font-semibold">Syltherine</h3>
-                <p className="text-sm text-gray-500">Stylish cafe chair</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 2.500.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 3.500.000
-                </p>
-              </div>
-            </div>
-
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr1}
-                alt="Syltherine"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
-              />
-              <div className="p-4 bg-blue-50">
-                <h3 className="text-lg font-semibold">Syltherine</h3>
-                <p className="text-sm text-gray-500">Stylish cafe chair</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 2.500.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 3.500.000
-                </p>
-              </div>
-            </div>
-
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr1}
-                alt="Syltherine"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
-              />
-              <div className="p-4 bg-blue-50">
-                <h3 className="text-lg font-semibold">Syltherine</h3>
-                <p className="text-sm text-gray-500">Stylish cafe chair</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 2.500.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 3.500.000
-                </p>
-              </div>
-            </div>
-
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr3}
-                alt="Lolito"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
-              />
-              <div className="p-4  bg-blue-50">
-                <h3 className="text-lg font-semibold">Lolito</h3>
-                <p className="text-sm text-gray-500">Luxury big sofa</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 7.000.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 14.000.000
-                </p>
-              </div>
-            </div>
-
-            <div className="border rounded-lg shadow-md overflow-hidden">
-              <img
-                src={pr1}
-                alt="Syltherine"
-                className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
-              />
-              <div className="p-4 bg-blue-50">
-                <h3 className="text-lg font-semibold">Syltherine</h3>
-                <p className="text-sm text-gray-500">Stylish cafe chair</p>
-                <p className="text-xl font-bold text-yellow-700">
-                  Rp 2.500.000
-                </p>
-                <p className="text-sm line-through text-gray-400">
-                  Rp 3.500.000
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-
           <div className="text-center mt-10">
             <button className="bg-white text-yellow-600 border border-yellow-600 px-6 py-3 rounded-md hover:bg-yellow-800 transition">
               Show More
