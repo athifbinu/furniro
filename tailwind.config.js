@@ -15,6 +15,7 @@ export const theme = {
     md: "768px",
     lg: "1024px",
     xl: "1234px",
+    Tv: "1536px",
   },
   extend: {
     colors: {

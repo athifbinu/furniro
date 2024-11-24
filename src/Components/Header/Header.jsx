@@ -78,13 +78,11 @@ const Header = () => {
               ))}
             </ul>
 
-            <div>
-              <div className="flex gap-5 items-center">
-                <CiUser className="text-xl" />
-                <CiSearch className="text-xl" />
-                <CiHeart className="text-xl" />
-                <CiShoppingCart className="text-xl" />
-              </div>
+            <div className="hidden lg:flex gap-5 items-center">
+              <CiUser className="text-xl" />
+              <CiSearch className="text-xl" />
+              <CiHeart className="text-xl" />
+              <CiShoppingCart className="text-xl" />
             </div>
           </div>
         </div>

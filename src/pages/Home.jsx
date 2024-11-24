@@ -47,8 +47,8 @@ const HomePage = () => {
         className="relative mb-10 bg-cover bg-center h-screen flex items-center justify-center"
         style={{ backgroundImage: `url(${homebg})` }}
       >
-        <div style={{ marginLeft: "45rem" }} className=" mt-16">
-          <div className=" bg-homebg bg-opacity-80 rounded-lg shadow-lg p-6 md:p-10 max-w-lg">
+        <div style={{ marginLeft: "45rem" }} className="mt-16 hidden lg:block">
+          <div className="bg-homebg bg-opacity-80 rounded-lg shadow-lg p-6 md:p-10 max-w-lg">
             <p className="text-sm uppercase text-gray-500 mb-4">New Arrival</p>
             <h1 className="text-3xl md:text-4xl font-bold text-yellow-700 mb-4">
               Discover Our New Collection
@@ -96,12 +96,10 @@ const HomePage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Our Products</h2>
 
-  
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-         
             <div className="border rounded-lg shadow-md overflow-hidden">
               <img
-                src={pr1} 
+                src={pr1}
                 alt="Syltherine"
                 className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
               />
@@ -119,7 +117,7 @@ const HomePage = () => {
 
             <div className="border rounded-lg shadow-md overflow-hidden">
               <img
-                src={pr2} 
+                src={pr2}
                 alt="Syltherine"
                 className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
               />
@@ -135,10 +133,9 @@ const HomePage = () => {
               </div>
             </div>
 
- 
             <div className="border rounded-lg shadow-md overflow-hidden">
               <img
-                src={pr3} 
+                src={pr3}
                 alt="Lolito"
                 className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
               />
@@ -155,7 +152,7 @@ const HomePage = () => {
             </div>
             <div className="border rounded-lg shadow-md overflow-hidden">
               <img
-                src={pr4} 
+                src={pr4}
                 alt="Syltherine"
                 className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
               />
@@ -173,7 +170,7 @@ const HomePage = () => {
 
             <div className="border rounded-lg shadow-md overflow-hidden">
               <img
-                src={pr1} 
+                src={pr1}
                 alt="Syltherine"
                 className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
               />
@@ -189,10 +186,9 @@ const HomePage = () => {
               </div>
             </div>
 
-
             <div className="border rounded-lg shadow-md overflow-hidden">
               <img
-                src={pr1} 
+                src={pr1}
                 alt="Syltherine"
                 className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
               />
@@ -208,10 +204,9 @@ const HomePage = () => {
               </div>
             </div>
 
-     
             <div className="border rounded-lg shadow-md overflow-hidden">
               <img
-                src={pr3} 
+                src={pr3}
                 alt="Lolito"
                 className="w-full h-48 object-cover transition-transform transform hover:scale-105 cursor-pointer"
               />
@@ -244,10 +239,7 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
-
-
           </div>
-
 
           <div className="text-center mt-10">
             <button className="bg-white text-yellow-600 border border-yellow-600 px-6 py-3 rounded-md hover:bg-yellow-800 transition">
@@ -259,7 +251,6 @@ const HomePage = () => {
       <section className="py-16 bg-roomsbg mb-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-     
             <div>
               <h2 className="text-4xl font-bold mb-4">
                 50+ Beautiful rooms inspiration
@@ -293,7 +284,7 @@ const HomePage = () => {
                 {/* Slide 1 */}
                 <div>
                   <img
-                    src={pr5} 
+                    src={pr5}
                     alt="Room Inspiration"
                     className="rounded-lg w-full object-cover"
                   />
