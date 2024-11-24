@@ -105,7 +105,7 @@ const HomePage = () => {
             ))}
           </div>
           <div className="text-center mt-10">
-            <button className="bg-white text-yellow-600 border border-yellow-600 px-6 py-3 rounded-md hover:bg-yellow-800 transition">
+            <button className="bg-white text-yellow-600 border border-yellow-600 px-12 py-3 rounded-md hover:bg-yellow-800 transition">
               Show More
             </button>
           </div>
